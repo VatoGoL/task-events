@@ -46,9 +46,9 @@ export function createLink() {
     a.innerHTML = 'tensor';
     a.href = 'https://tensor.ru/';
 
-    a.addEventListener('click', () => {
-        if (cl == 0) {
-            event.stopPropagation();
+    a.addEventListener('click', (e) => {
+        if (cl === 0) {
+            e.preventDefault();
             a.innerHTML += ' ' + a.href;
 
             cl++;
